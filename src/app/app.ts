@@ -1,11 +1,12 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { PerfilUsuarioComponent } from './componentes/perfil-usuario/perfil-usuario.component';
 
 @Component({
-  imports: [],
   selector: 'app-root',
-  styleUrl: './app.css',
-  templateUrl: './app.html',
+  standalone: true,
+  imports: [PerfilUsuarioComponent],
+  template: `<app-perfil-usuario></app-perfil-usuario>`
 })
 export class App {
-  protected readonly title = signal('interpolacion-objetos-demo');
+  // Componente raíz
 }
